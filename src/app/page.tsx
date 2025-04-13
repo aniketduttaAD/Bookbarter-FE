@@ -40,13 +40,13 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className='hidden md:block bg-slate-800 h-[400px] rounded-lg'>
+            <div className='hidden md:block bg-slate-800 h-[400px] rounded-lg overflow-hidden'>
               <div className='flex items-center justify-center h-full text-white relative'>
                 <Image
                   src='/main-image2.png'
-                  alt='Some alt text'
+                  alt='image'
                   fill
-                  className='object-cover'
+                  className='object-cover rounded-lg'
                   priority
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 />
