@@ -115,7 +115,7 @@ export default function OwnerDashboardPage() {
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
                 <PageHeader
                     title={`${getGreeting()},`}
-                />
+                    description={user.name} />
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button asChild>
                         <Link href="/books/new">

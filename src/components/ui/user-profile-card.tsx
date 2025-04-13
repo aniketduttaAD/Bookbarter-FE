@@ -7,9 +7,7 @@ import {
     CardTitle,
     CardDescription,
     CardContent,
-    CardFooter,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { BookOpen, Star } from "lucide-react";
 
 interface UserProfileCardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -32,6 +30,7 @@ const roleLabels: Record<string, string> = {
 };
 
 const UserProfileCard = React.forwardRef<HTMLDivElement, UserProfileCardProps>(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     ({ user, bookCount, ratingAverage, onEditClick, className, ...props }, ref) => (
         <Card
             ref={ref}
@@ -103,16 +102,7 @@ const UserProfileCard = React.forwardRef<HTMLDivElement, UserProfileCardProps>(
                 </div>
             </CardContent>
 
-            <CardFooter>
-                <Button
-                    onClick={onEditClick}
-                    variant="outline"
-                    size="sm"
-                    className="w-full"
-                >
-                    Edit Profile
-                </Button>
-            </CardFooter>
+
         </Card>
     )
 );

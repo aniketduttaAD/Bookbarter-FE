@@ -22,6 +22,7 @@ export const NetworkContext = createContext<NetworkContextType>({
 });
 
 export const useNetwork = () => useContext(NetworkContext);
+export const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
 
 export function NetworkProvider({ children }: { children: ReactNode }) {
     const [isOnline, setIsOnline] = useState(
@@ -58,7 +59,7 @@ export function NetworkProvider({ children }: { children: ReactNode }) {
         const checkConnectionSpeed = async () => {
             try {
                 const start = Date.now();
-                await fetch("http://localhost:5001/api/offline/ping", { method: "HEAD" });
+                await fetch(`${BASE_URL}/offline/ping`, { method: "HEAD" });
                 const duration = Date.now() - start;
                 setIsConnectionFast(duration < 300);
             } catch {

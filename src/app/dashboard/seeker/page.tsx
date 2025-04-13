@@ -73,6 +73,7 @@ export default function SeekerDashboardPage() {
         <Container>
             <PageHeader
                 title={`${getGreeting()},`}
+                description={user.name}
             />
 
             <div className="mb-8">
